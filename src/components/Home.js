@@ -1,12 +1,14 @@
 import React from 'react';
 import Filter from './Filter';
 import CharacterList from './CharacterList';
+import Footer from './Footer';
 import PropTypes from 'prop-types';
 
 const Home = props => {
   const {getUserInput, userInput, characters} = props;
 
   return (
+    <>
     <main>
       <Filter 
         getUserInput={getUserInput} 
@@ -17,6 +19,8 @@ const Home = props => {
         userInput={userInput}
       />
     </main>
+    <Footer />
+    </>
   );
 };
 
