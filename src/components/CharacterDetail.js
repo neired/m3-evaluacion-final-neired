@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {Link} from 'react-router-dom';
+import './CharacterDetail.scss';
 
 const CharacterDetail = props => {
   const {routerProps, characters} = props;
@@ -10,13 +11,13 @@ const CharacterDetail = props => {
   if (character[0]) {
   const {name, image, status, species, origin, episode} = character[0];
     return (
-      <React.Fragment>
+      <div className="char-detail__main-container">
         <Link to="/" className="app__back">Volver</Link>
-        <div className="character-detail__container">
-          <img className="character-img" src={image} alt={name}></img>
+        <div className="char-detail__container">
+          <div className="char-detail__img-container"><img className="character-img" src={image} alt={name}></img></div>
           <div>
             <h2>{name}</h2>
-            <ul>
+            <ul className="char-detail__list">
               <li>Status: {status}</li>
               <li>Species: {species}</li>
               <li>Origin: {origin.name}</li>
@@ -24,7 +25,7 @@ const CharacterDetail = props => {
             </ul>
           </div>
         </div>
-      </React.Fragment>
+      </div>
     );
   } else {
     return (

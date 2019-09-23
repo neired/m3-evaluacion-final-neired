@@ -8,7 +8,7 @@ class CharacterCard extends React.Component {
       <>
         <img className="character-img" src={image} alt={name}></img>
         <div className="character-info__container">
-          <p className="character-name">{name}</p>
+          <h2 className="character-name">{name}</h2>
           <p className="character-species">{species}</p>
         </div>
       </>

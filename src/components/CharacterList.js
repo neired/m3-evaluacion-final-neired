@@ -3,7 +3,6 @@ import CharacterCard from './CharacterCard';
 import PropTypes from 'prop-types';
 import {Link} from 'react-router-dom';
 
-
 class CharacterList extends React.Component {
   render() {
   const { characters, userInput } = this.props;
