@@ -1,10 +1,10 @@
 import React from 'react';
+import {Switch, Route} from 'react-router-dom';
 import logo from './logo.png';
 import {getCharacters} from './services/Api';
 import './App.scss';
-import CharacterList from './components/CharacterList';
-import Filter from './components/Filter';
-
+import Home from './components/Home';
+import CharacterDetail from './components/CharacterDetail';
 
 class App extends React.Component {
   constructor(props) {
@@ -41,12 +41,28 @@ class App extends React.Component {
     return (
       <>
         <header className="app-header">
+          <h1 className="header-title">Rick and Morty</h1>
           <img className="header-img" src={logo} alt="Rick and Morty logo"></img>
         </header>
-        <main>
-          <Filter getUserInput={this.getUserInput} userInput={userInput}/>
-          <CharacterList characters={characters} userInput={userInput}/>
-        </main>
+        <Switch>
+          <Route exact path="/" render={ ()=>{
+            return (
+              <Home 
+                getUserInput={this.getUserInput}
+                userInput={userInput}
+                characters={characters}
+              />
+            );
+          }} />
+          <Route path="/character-detail/:characterId" render={routerProps => {
+            return (
+              <CharacterDetail 
+                routerProps={routerProps}
+                characters={characters}
+              />
+            );
+          }}/>
+        </Switch>
       </>
     );
   }
