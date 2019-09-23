@@ -15,7 +15,7 @@ const CharacterDetail = props => {
         <Link to="/" className="app__back">Volver</Link>
         <div className="char-detail__container">
           <div className="char-detail__img-container"><img className="character-img" src={image} alt={name}></img></div>
-          <div>
+          <div className="char-detail__data-container">
             <h2>{name}</h2>
             <ul className="char-detail__list">
               <li>{(status === 'Alive') ? <i class="far fa-grin"></i> : <i class="fas fa-skull-crossbones"></i>}</li>
