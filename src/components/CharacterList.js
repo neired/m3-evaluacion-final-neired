@@ -1,9 +1,8 @@
 import React from 'react';
 import CharacterCard from './CharacterCard';
 
-
 class CharacterList extends React.Component {
-render() {
+  render() {
   const { characters, userInput } = this.props;
   return(
     <ol className="characters-list">
@@ -19,12 +18,10 @@ render() {
                 image={character.image} 
               />
             </li>
-          )
-        })
+          )})
       }
     </ol>
-    )
-  }
+  )}
 }
 
 export default CharacterList;
