@@ -11,18 +11,15 @@ const CharacterDetail = props => {
   if (character[0]) {
   const {name, image, status, species, origin, episode} = character[0];
     return (
-      <div className="character-detail__main-container">
-        <Link to="/" className="app__back">Volver</Link>
+      <div className="char-detail__main-container">
+        <Link to="/" className="app__back"><i className="fas fa-long-arrow-alt-left"></i> Volver</Link>
         <div className="char-detail__container">
-          <div className="char-detail__img-container"><img className="character-img" src={image} alt={name}></img></div>
+          <div className="char-detail__img-container"><img className="char-img" src={image} alt={name}></img></div>
           <div className="char-detail__data-container">
-            <h2>{name}</h2>
-            <ul className="char-detail__list">
-              <li>{(status === 'Alive') ? <i class="far fa-grin"></i> : <i class="fas fa-skull-crossbones"></i>}</li>
-              <li>{(species === 'Human') ? <i class="fas fa-male"></i> : <i class="fab fa-reddit-alien"></i>}</li>
-              <li>Origin: {origin.name}</li>
-              <li>Episodes: {episode.length}</li>
-            </ul>
+            <h2 className="char-detail__h2">{name}</h2>
+              <p>{(status !== 'Dead') ? <i className="fas fa-heart"></i> : <i className="fas fa-skull-crossbones"></i>} · {(species === 'Human') ? <i className="fas fa-male"></i> : <i className="fab fa-reddit-apen"></i>}</p>
+              <p className="char-detail__p"><b>Origin:</b> {origin.name}</p>
+              <p className="char-detail__p"><b>Episodes:</b> {episode.length}</p>
           </div>
         </div>
       </div>

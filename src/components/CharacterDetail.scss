@@ -8,30 +8,65 @@
 .char-detail__container {
   display: flex;
   background-color: rgb(0, 180, 204);
-  width: 700px;
-  height: 300px;
-  align-items: center;
+  flex-direction: column;
+  @media all and (min-width:768px) {
+    flex-direction: row;
+    width: 700px;
+    height: 300px;
+    align-items: center;
+}
 }
 .char-detail__img-container {
   width: 300px;
-  height: 300px;
+  height: 250px;
   margin: 0;
+  @media all and (min-width:768px) {
+    height: 300px;
+  }
 }
-.character-img {
+.char-img {
   display: flex;
   justify-content: center;
   align-content: center;
-  margin: 50px;
+  width: 200px;
+  height: 200px;
+  margin: 50px 50px 0px 50px;
+  @media all and (min-width:768px) {
+    margin: 50px;
+  }
 }
 .app__back {
   text-decoration: none;
   color: white;
   text-align: end;
+  width: 300px;
+  @media all and (min-width:768px) {
+    width: 700px;
+}
 }
 .char-detail__data-container {
-  margin: 0;
+  padding: 15px 0;
+  margin: 0 50px;
+  width: 200px;
+  @media all and (min-width:768px) {
+    margin: 0;
 }
-.char-detail__list {
-  list-style: none;
-  padding: 0px;
+}
+.char-detail__h2 {
+  font-size: 17px;
+  @media all and (min-width:768px) {
+    font-size: 24px;
+  }
+}
+.char-detail__p {
+  font-size: 15px;
+  @media all and (min-width:768px) {
+    font-size: 16px;
+  }
+}
+.fa-heart{
+  color:red;
+}
+.fa-skull-crossbones{
+  color:black;
 }

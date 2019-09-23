@@ -22,12 +22,11 @@ body {
 }
 .character-info__container {
   background-color: rgb(0, 180, 204);
-  width: 200px;
 }
 .character-img {
   width: 200px;
   height: 200px;
-  margin: 0;
+  margin: 0px;
 }
 .character-name {
   font-size: 14px;
@@ -38,11 +37,6 @@ body {
   font-size: 17px;
   padding-left: 10px;
   padding-bottom: 10px;
-}
-.character-item {
-  margin: auto;
-  width: 200px;
-  height: 300px;
 }
 .character-link {
   text-decoration: none;
@@ -60,13 +54,23 @@ body {
   color: white;
   padding: 7px;
   background-color: black;
-  margin: 16px 16px;
+  margin: 30px 16px;
 }
 .characters-list{
   list-style: none;
   display: grid;
-  grid-template-columns: auto auto auto auto;
+  grid-template-columns: auto;
   grid-gap: 16px;
+  margin-bottom: 30px;
+  @media all and (min-width:320px) {
+    grid-template-columns: auto auto;
+}
+  @media all and (min-width:768px) {
+    grid-template-columns: auto auto auto;
+}
+  @media all and (min-width:1280px) {
+    grid-template-columns: auto auto auto auto auto;
+}
 }
 
 .character-detail__container {
