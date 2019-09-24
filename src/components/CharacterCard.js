@@ -9,7 +9,7 @@ class CharacterCard extends React.Component {
         <img className="character-img" src={image} alt={name}></img>
         <div className="character-info__container">
           <h2 className="character-name">{name}</h2>
-          <div className="character-species">{(species === 'Human') ? <i className="fas fa-male"></i> : <i className="fab fa-reddit-alien"></i>}</div>
+          <div className="character-species">{species} · {(species === 'Human') ? <i className="fas fa-male"></i> : <i className="fab fa-reddit-alien"></i>}</div>
         </div>
       </>
     )

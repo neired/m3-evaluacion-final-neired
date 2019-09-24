@@ -15,9 +15,9 @@ const CharacterDetail = props => {
         <Link to="/" className="app__back"><i className="fas fa-long-arrow-alt-left"></i> Volver</Link>
         <div className="char-detail__container">
           <div className="char-detail__img-container"><img className="char-img" src={image} alt={name}></img></div>
-          <div className="char-detail__data-container">
-            <h2 className="char-detail__h2">{name}</h2>
-              <p>{(status !== 'Dead') ? <i className="fas fa-heart"></i> : <i className="fas fa-skull-crossbones"></i>} · {(species === 'Human') ? <i className="fas fa-male"></i> : <i className="fab fa-reddit-apen"></i>}</p>
+          <div className={(status !== 'Dead') ? 'char-detail__data-container' : 'char-detail__data-container black'}>
+            <h2 className="char-detail__h2">{name} {(status !== 'Dead') ? '' : <i className="fas fa-skull-crossbones"></i>}</h2>
+              <p className="char-detail__p"><b>Species:</b> {species} · {(species !== 'Human') ? <i class="fab fa-reddit-alien"></i> : <i className="fas fa-male"></i>}</p>
               <p className="char-detail__p"><b>Origin:</b> {origin.name}</p>
               <p className="char-detail__p"><b>Episodes:</b> {episode.length}</p>
           </div>

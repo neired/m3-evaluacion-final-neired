@@ -5,12 +5,13 @@
 }
 body {
   background-color: black;
-  font-family: 'Roboto Slab', serif;
+  font-family: "Roboto Slab", serif;
 }
 .app-header {
   display: flex;
   justify-content: center;
   flex-direction: column;
+  padding-top: 30px;
 }
 .header-title {
   height: 0px;
@@ -19,7 +20,7 @@ body {
 }
 .header-img {
   width: 300px;
-  @media all and (min-width:768px) {
+  @media all and (min-width: 768px) {
     width: 400px;
   }
 }
@@ -59,23 +60,27 @@ body {
   background-color: black;
   margin: 30px 16px;
 }
-.characters-list{
+.characters-list {
   list-style: none;
   display: grid;
   grid-template-columns: auto;
   grid-gap: 16px;
   margin-bottom: 30px;
-  @media all and (min-width:320px) {
+  @media all and (min-width: 320px) {
     grid-template-columns: auto auto;
-}
-  @media all and (min-width:768px) {
+  }
+  @media all and (min-width: 768px) {
     grid-template-columns: auto auto auto;
-}
-  @media all and (min-width:1280px) {
+  }
+  @media all and (min-width: 1280px) {
     grid-template-columns: auto auto auto auto auto;
+  }
 }
+.character-item {
+  -webkit-box-shadow: 6px 7px 19px -16px rgba(255,255,255,1);
+-moz-box-shadow: 6px 7px 19px -16px rgba(255,255,255,1);
+box-shadow: 6px 7px 19px -16px rgba(255,255,255,1);
 }
-
 .character-detail__container {
   color: white;
 }

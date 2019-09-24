@@ -4,23 +4,27 @@
   flex-direction: column;
   align-items: center;
   color: white;
+  margin-top: 50px;
 }
 .char-detail__container {
   display: flex;
   background-color: rgb(0, 180, 204);
   flex-direction: column;
-  @media all and (min-width:768px) {
+  -webkit-box-shadow: 6px 7px 19px -16px rgba(255, 255, 255, 1);
+  -moz-box-shadow: 6px 7px 19px -16px rgba(255, 255, 255, 1);
+  box-shadow: 6px 7px 19px -16px rgba(255, 255, 255, 1);
+  @media all and (min-width: 768px) {
     flex-direction: row;
     width: 700px;
     height: 300px;
     align-items: center;
-}
+  }
 }
 .char-detail__img-container {
   width: 300px;
   height: 250px;
   margin: 0;
-  @media all and (min-width:768px) {
+  @media all and (min-width: 768px) {
     height: 300px;
   }
 }
@@ -31,7 +35,7 @@
   width: 200px;
   height: 200px;
   margin: 50px 50px 0px 50px;
-  @media all and (min-width:768px) {
+  @media all and (min-width: 768px) {
     margin: 50px;
   }
 }
@@ -40,33 +44,37 @@
   color: white;
   text-align: end;
   width: 300px;
-  @media all and (min-width:768px) {
+  @media all and (min-width: 768px) {
     width: 700px;
-}
+  }
 }
 .char-detail__data-container {
   padding: 15px 0;
   margin: 0 50px;
   width: 200px;
-  @media all and (min-width:768px) {
+  @media all and (min-width: 768px) {
     margin: 0;
+    width: 350px;
+  }
 }
+.black {
+  color: black;
 }
 .char-detail__h2 {
   font-size: 17px;
-  @media all and (min-width:768px) {
+  @media all and (min-width: 768px) {
     font-size: 24px;
   }
 }
 .char-detail__p {
   font-size: 15px;
-  @media all and (min-width:768px) {
+  @media all and (min-width: 768px) {
     font-size: 16px;
   }
 }
-.fa-heart{
-  color:red;
+.fa-heart {
+  color: red;
 }
-.fa-skull-crossbones{
-  color:black;
+.fa-skull-crossbones {
+  color: black;
 }
