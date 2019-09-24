@@ -1,8 +1,8 @@
 import React from 'react';
 import {Switch, Route} from 'react-router-dom';
-import logo from './logo.png';
+import logo from './images/logo.png';
 import {getCharacters} from './services/Api';
-import './App.scss';
+import './stylesheets/App.scss';
 import Home from './components/Home';
 import CharacterDetail from './components/CharacterDetail';
 
