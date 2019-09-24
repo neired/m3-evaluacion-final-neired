@@ -11,9 +11,11 @@ class App extends React.Component {
     super(props);
     this.state = {
       characters: [],
-      userInput : ''
+      userInput : '',
+      selectedRadio: ''
     }
     this.getUserInput = this.getUserInput.bind(this);
+    this.handleRadioChange = this.handleRadioChange.bind(this);
   }
 
   componentDidMount() {
@@ -36,8 +38,16 @@ class App extends React.Component {
     })
   }
 
+  handleRadioChange(event) {
+    const selectedRadio = event.currentTarget.value;
+    console.log(selectedRadio);
+    this.setState({
+      selectedRadio: selectedRadio
+    })
+  }
+
   render() {
-    const { userInput, characters } = this.state;
+    const { userInput, characters, selectedRadio } = this.state;
     return (
       <>
         <header className="app-header">
@@ -51,6 +61,8 @@ class App extends React.Component {
                 getUserInput={this.getUserInput}
                 userInput={userInput}
                 characters={characters}
+                handleRadioChange={this.handleRadioChange}
+                selectedRadio={selectedRadio}
               />
             );
           }} />
