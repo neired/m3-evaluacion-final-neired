@@ -11,9 +11,11 @@ class App extends React.Component {
     super(props);
     this.state = {
       characters: [],
-      userInput : ''
+      userInput : '',
+      selectedLocation: ''
     }
     this.getUserInput = this.getUserInput.bind(this);
+    this.handleSelection = this.handleSelection.bind(this);
   }
 
   componentDidMount() {
@@ -36,6 +38,13 @@ class App extends React.Component {
     })
   }
 
+  handleSelection (event) {
+    const selectedLocation = event.currentTarget.value;
+    this.setState({
+      selectedLocation: selectedLocation
+    })
+  }
+
   render() {
     const { userInput, characters } = this.state;
     return (
@@ -51,6 +60,7 @@ class App extends React.Component {
                 getUserInput={this.getUserInput}
                 userInput={userInput}
                 characters={characters}
+                handleSelection={this.handleSelection}
               />
             );
           }} />
