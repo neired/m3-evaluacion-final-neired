@@ -10,9 +10,9 @@
   display: flex;
   background-color: rgb(0, 180, 204);
   flex-direction: column;
-  -webkit-box-shadow: 6px 7px 19px -16px rgba(255, 255, 255, 1);
-  -moz-box-shadow: 6px 7px 19px -16px rgba(255, 255, 255, 1);
-  box-shadow: 6px 7px 19px -16px rgba(255, 255, 255, 1);
+  -webkit-box-shadow: 6px 6px 14px -9px rgba(157, 255, 10, 1);
+  -moz-box-shadow: 6px 6px 14px -9px rgba(157, 255, 10, 1);
+  box-shadow: 6px 6px 14px -9px rgba(157, 255, 10, 1);
   @media all and (min-width: 768px) {
     flex-direction: row;
     width: 700px;
