@@ -5,12 +5,25 @@ import {Link} from 'react-router-dom';
 
 class CharacterList extends React.Component {
   render() {
-  const { characters, userInput } = this.props;
+  const { characters, userInput, selectedEpisodes } = this.props;
   return(
     <ol className="characters-list">
       {characters
         .filter(character => character.name.toUpperCase()
         .includes(userInput.toUpperCase()))
+        .filter(character => {
+          if (selectedEpisodes === 'all') {
+            return character;
+          } else {
+            if (selectedEpisodes === 'punctual') {
+              return character.episode.length < 5;
+            } else if (selectedEpisodes === 'regular') {
+              return (character.episode.length > 6 && character.episode.length < 25);
+            } else {
+              return character.episode.length > 30;
+            }
+          }
+        })
         .map(character => {
           return (
             <li className="character-item" key={character.id} id={character.id}>

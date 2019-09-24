@@ -11,9 +11,11 @@ class App extends React.Component {
     super(props);
     this.state = {
       characters: [],
-      userInput : ''
+      userInput : '',
+      selectedEpisodes : 'all'
     }
     this.getUserInput = this.getUserInput.bind(this);
+    this.handleOptionChange = this.handleOptionChange.bind(this);
   }
 
   componentDidMount() {
@@ -36,8 +38,16 @@ class App extends React.Component {
     })
   }
 
+  handleOptionChange(event) {
+    const selectedEpisodes = event.currentTarget.value;
+    console.log(selectedEpisodes);
+    this.setState({
+      selectedEpisodes: selectedEpisodes
+    })
+  }
+
   render() {
-    const { userInput, characters } = this.state;
+    const { userInput, characters, selectedEpisodes } = this.state;
     return (
       <>
         <header className="app-header">
@@ -51,6 +61,8 @@ class App extends React.Component {
                 getUserInput={this.getUserInput}
                 userInput={userInput}
                 characters={characters}
+                handleOptionChange={this.handleOptionChange}
+                selectedEpisodes={selectedEpisodes}
               />
             );
           }} />
