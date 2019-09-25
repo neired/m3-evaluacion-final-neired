@@ -1,12 +1,12 @@
 import React from 'react';
 import Filter from './Filter';
-import Select from './Select';
+import Input from './Input';
 import CharacterList from './CharacterList';
 import Footer from './Footer';
 import PropTypes from 'prop-types';
 
 const Home = props => {
-  const {getUserInput, userInput, characters, handleSelection} = props;
+  const {getUserInput, userInput, characters, inputLocation, getInputLocation} = props;
 
   return (
     <>
@@ -14,14 +14,18 @@ const Home = props => {
       <Filter 
         getUserInput={getUserInput} 
         userInput={userInput}
+        inputLocation={inputLocation}
       />
-      <Select 
-        onChange={handleSelection}
+      <Input 
+        getInputLocation={getInputLocation}
         characters={characters}
+        inputLocation={inputLocation}
       />
       <CharacterList
         characters={characters}
         userInput={userInput}
+        inputLocation={inputLocation}
+
       />
     </main>
     <Footer />
