@@ -4,9 +4,9 @@ import PropTypes from "prop-types";
 class Select extends React.Component {
     render() {
     const { handleSelection, characters } = this.props;
-    const locations = new Set(characters.location.name);
-    const locArr = [...locations];
-    console.log(locations);
+    // const locations = new Set(characters.location.name);
+    // const locArr = [...locations];
+    // console.log(locations);
     return (
       <div className="search-container">
         <label className="search-label"></label>
