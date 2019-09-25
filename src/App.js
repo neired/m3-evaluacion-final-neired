@@ -11,9 +11,11 @@ class App extends React.Component {
     super(props);
     this.state = {
       characters: [],
-      userInput : ''
+      userInput : '',
+      selectedGender: 'All'
     }
     this.getUserInput = this.getUserInput.bind(this);
+    this.handleSelect = this.handleSelect.bind(this);
   }
 
   componentDidMount() {
@@ -36,8 +38,15 @@ class App extends React.Component {
     })
   }
 
+  handleSelect(event) {
+    const selectedGender = event.currentTarget.value;
+    this.setState({
+      selectedGender: selectedGender
+    })
+  }
+
   render() {
-    const { userInput, characters } = this.state;
+    const { userInput, characters, selectedGender } = this.state;
     return (
       <>
         <header className="app-header">
@@ -51,6 +60,8 @@ class App extends React.Component {
                 getUserInput={this.getUserInput}
                 userInput={userInput}
                 characters={characters}
+                handleSelect={this.handleSelect}
+                selectedGender={selectedGender}
               />
             );
           }} />
